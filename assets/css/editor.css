@@ -1,0 +1,257 @@
+/* SERPsKit SEOTable — Block Editor Styles */
+
+/* ── Setup panel ───────────────────────── */
+
+.sst-setup-panel {
+	max-width: 420px;
+	margin: 0 auto;
+	padding: 40px 30px;
+	text-align: center;
+	background: #f9fafb;
+	border: 2px dashed #d1d5db;
+	border-radius: 12px;
+}
+
+.sst-setup-panel h3 {
+	margin: 0 0 4px;
+	font-size: 18px;
+	color: #1a1a1a;
+}
+
+.sst-setup-panel p {
+	font-size: 13px;
+	color: #6b7280;
+	margin: 0 0 20px;
+}
+
+.sst-setup-fields {
+	display: flex;
+	gap: 16px;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.sst-setup-fields label {
+	display: flex;
+	flex-direction: column;
+	font-size: 12px;
+	font-weight: 600;
+	color: #374151;
+	gap: 4px;
+}
+
+.sst-setup-fields input {
+	width: 80px;
+	padding: 6px 10px;
+	border: 1px solid #d1d5db;
+	border-radius: 6px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.sst-setup-btn {
+	background: #2d6a4f !important;
+	color: #fff !important;
+	border: none !important;
+	padding: 10px 28px !important;
+	border-radius: 6px !important;
+	font-size: 14px !important;
+	font-weight: 600 !important;
+	cursor: pointer !important;
+}
+
+.sst-setup-btn:hover {
+	background: #245a42 !important;
+}
+
+/* ── Table editor ──────────────────────── */
+
+.sst-editor-wrap {
+	overflow-x: auto;
+	border-radius: 8px;
+	border: 1px solid #e0e0e0;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.sst-editor-table {
+	width: 100%;
+	border-collapse: collapse;
+	min-width: 500px;
+}
+
+.sst-editor-table thead tr {
+	background: var(--sst-heading-bg, #2d6a4f);
+}
+
+.sst-editor-table thead th {
+	padding: 8px 10px;
+	text-align: left;
+	border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.sst-editor-table thead th:last-child {
+	border-right: none;
+}
+
+.sst-editor-table thead th input {
+	background: transparent;
+	border: 1px solid transparent;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	padding: 3px 4px;
+	width: 100%;
+	box-sizing: border-box;
+	border-radius: 3px;
+	outline: none;
+}
+
+.sst-editor-table thead th input:focus {
+	border-color: rgba(255, 255, 255, 0.5);
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.sst-editor-table thead th input::placeholder {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.sst-editor-table tbody tr:nth-child(even) {
+	background: #f7faf8;
+}
+
+.sst-editor-table tbody tr:nth-child(odd) {
+	background: #fff;
+}
+
+.sst-editor-table tbody td {
+	padding: 6px 8px;
+	vertical-align: top;
+	border-bottom: 1px solid #e8e8e8;
+	border-right: 1px solid #efefef;
+	font-size: 13px;
+	position: relative;
+	cursor: pointer;
+	min-width: 80px;
+}
+
+.sst-editor-table tbody td:last-child {
+	border-right: none;
+}
+
+.sst-editor-table tbody tr:last-child td {
+	border-bottom: none;
+}
+
+/* ── Cell content in editor ────────────── */
+
+.sst-cell-input {
+	width: 100%;
+	border: none;
+	background: transparent;
+	font-size: 13px;
+	font-family: inherit;
+	color: #1a1a1a;
+	padding: 2px 0;
+	outline: none;
+	resize: none;
+	overflow: hidden;
+	line-height: 1.4;
+}
+
+.sst-cell-input:focus {
+	background: rgba(45, 106, 79, 0.04);
+	border-radius: 2px;
+}
+
+/* Selected cell highlight */
+
+.sst-cell-selected {
+	outline: 2px solid #2d6a4f !important;
+	outline-offset: -2px;
+	background: rgba(45, 106, 79, 0.04) !important;
+}
+
+/* ── Badge display in editor ───────────── */
+
+.sst-editor-badge {
+	display: inline-block;
+	font-size: 10px;
+	font-weight: 600;
+	border-radius: 3px;
+	padding: 2px 6px;
+	white-space: nowrap;
+	margin-top: 3px;
+}
+
+.sst-editor-badge-green { background: #d1fae5; color: #065f46; }
+.sst-editor-badge-blue  { background: #dbeafe; color: #1e40af; }
+.sst-editor-badge-amber { background: #fef3c7; color: #92400e; }
+.sst-editor-badge-red   { background: #fee2e2; color: #991b1b; }
+.sst-editor-badge-gray  { background: #f3f4f6; color: #374151; }
+
+.sst-editor-brand-tag {
+	display: inline-block;
+	font-size: 10px;
+	font-weight: 500;
+	background: #e9f5ee;
+	color: #2d6a4f;
+	border-radius: 3px;
+	padding: 1px 6px;
+	margin-top: 3px;
+}
+
+.sst-editor-subtext {
+	display: block;
+	font-size: 11px;
+	color: #555;
+	margin-top: 2px;
+}
+
+/* ── Toolbar buttons ───────────────────── */
+
+.sst-toolbar-group {
+	display: flex;
+	gap: 4px;
+}
+
+/* ── Cell options panel in inspector ───── */
+
+.sst-cell-opts {
+	padding: 4px 0;
+}
+
+.sst-cell-opts label {
+	display: block;
+	margin-bottom: 8px;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.sst-cell-opts .components-text-control__input {
+	font-size: 13px;
+}
+
+/* ── Caption ───────────────────────────── */
+
+.sst-caption-input {
+	width: 100%;
+	padding: 8px 12px;
+	border: 1px dashed #d1d5db;
+	border-radius: 0 0 8px 8px;
+	font-size: 11px;
+	color: #888;
+	background: #fafafa;
+	outline: none;
+	font-family: inherit;
+}
+
+.sst-caption-input:focus {
+	border-color: #2d6a4f;
+	background: #fff;
+}
+
+.sst-caption-input::placeholder {
+	color: #bbb;
+}

@@ -1,0 +1,122 @@
+/* SERPsKit SEOTable - Frontend */
+
+.serpskit-seotable-wrap {
+	font-family: inherit;
+	line-height: 1.5;
+}
+
+.sst-overflow {
+	border-radius: 8px;
+	border: var(--sst-border-size, 1px) solid var(--sst-border-color, #e0e0e0);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.sst-table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+	font-family: inherit;
+}
+
+.sst-table thead tr {
+	background: var(--sst-heading-bg, #2d6a4f);
+	color: var(--sst-heading-fc, #fff);
+}
+
+.sst-table thead th {
+	padding: 11px 13px;
+	text-align: left;
+	font-size: var(--sst-heading-fs, 12px);
+	font-weight: var(--sst-heading-fw, 600);
+	text-transform: var(--sst-heading-case, capitalize);
+	letter-spacing: 0.3px;
+	border-right: 1px solid rgba(255, 255, 255, 0.15);
+	word-break: break-word;
+	overflow-wrap: break-word;
+}
+
+.sst-table thead th:last-child { border-right: none; }
+
+.sst-table tbody tr:nth-child(even) { background: var(--sst-row-even, #f7faf8); }
+.sst-table tbody tr:nth-child(odd)  { background: var(--sst-row-odd, #fff); }
+.sst-table tbody tr:hover           { background: var(--sst-row-hover, #eaf4ef); }
+
+.sst-table tbody td {
+	padding: 10px 13px;
+	vertical-align: top;
+	border-bottom: 1px solid var(--sst-cell-border, #e8e8e8);
+	border-right: 1px solid #efefef;
+	font-size: var(--sst-fs, 13px);
+	font-weight: var(--sst-fw, 400);
+	color: var(--sst-fc, #1a1a1a);
+	line-height: 1.45;
+	word-break: break-word;
+	overflow-wrap: break-word;
+}
+
+.sst-table tbody td:last-child      { border-right: none; }
+.sst-table tbody tr:last-child td   { border-bottom: none; }
+
+.sst-cell-name {
+	font-weight: 600;
+	font-size: var(--sst-fs, 13px);
+	color: var(--sst-name-fc, #1b4332);
+}
+
+.sst-brand-tag {
+	display: inline-block;
+	font-size: var(--sst-badge-fs, 10px);
+	font-weight: 500;
+	background: #e9f5ee;
+	color: #2d6a4f;
+	border-radius: 3px;
+	padding: 1px 6px;
+	margin-top: 3px;
+}
+
+.sst-badge {
+	display: inline-block;
+	font-size: var(--sst-badge-fs, 10px);
+	font-weight: 600;
+	border-radius: 3px;
+	padding: 2px 6px;
+}
+
+.sst-badge-green { background: #d1fae5; color: #065f46; }
+.sst-badge-blue  { background: #dbeafe; color: #1e40af; }
+.sst-badge-amber { background: #fef3c7; color: #92400e; }
+.sst-badge-red   { background: #fee2e2; color: #991b1b; }
+.sst-badge-gray  { background: #f3f4f6; color: #374151; }
+
+.sst-subtext {
+	display: block;
+	font-size: 11px;
+	color: #555;
+	margin-top: 2px;
+}
+
+.sst-table caption {
+	caption-side: bottom;
+	font-size: 11px;
+	color: #888;
+	padding: 8px 4px;
+	text-align: left;
+}
+
+.sst-table td { font-variant-numeric: tabular-nums; }
+
+@media (max-width: 768px) {
+	.sst-overflow {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		border-radius: 6px;
+	}
+	.sst-table {
+		table-layout: auto;
+		min-width: 500px;
+	}
+	.sst-table thead th { padding: 9px 10px; font-size: 11px; }
+	.sst-table tbody td { padding: 8px 10px; font-size: 12px; }
+	.sst-badge { font-size: 9px; padding: 1px 5px; }
+	.sst-brand-tag { font-size: 9px; }
+}
